@@ -22,5 +22,24 @@ public class TodoService: ITodoService {
         await _db.SaveChangesAsync();
         return todo;
     }
+    public async Task<Todo> UpdateTodoAsync(int id, Todo todo) {
+        var existingTodo = await _db.Todos.FindAsync(id);
+        if (existingTodo == null) {
+            return null;
+        }
+        existingTodo.Task = todo.Task;
+        existingTodo.Completed = todo.Completed;
+        await _db.SaveChangesAsync();
+        return existingTodo;
+    }
+    public async Task<bool> DeleteTodoAsync(int id) {
+        var todo = await _db.Todos.FindAsync(id);
+        if (todo == null) {
+            return false;
+        }
+        _db.Todos.Remove(todo);
+        await _db.SaveChangesAsync();
+        return true;
+    }
 
 }

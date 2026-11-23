@@ -16,3 +16,15 @@ Content-Type: application/json
   "Task": "New Todo",
   "Completed": false
 }
+
+###
+PUT {{todoapi_HostAddress}}/todos/{{id}}
+Content-Type: application/json
+
+{
+  "Task": "Updated Todo",
+  "Completed": true
+}
+
+###
+DELETE {{todoapi_HostAddress}}/todos/{{id}}
