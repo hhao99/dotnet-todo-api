@@ -1,0 +1,18 @@
+@todoapi_HostAddress = http://localhost:5220
+@id = 1
+
+GET {{todoapi_HostAddress}}/todos
+Accept: application/json
+
+###
+GET {{todoapi_HostAddress}}/todos/{{id}}
+Accept: application/json
+
+### 
+POST {{todoapi_HostAddress}}/todos
+Content-Type: application/json
+
+{
+  "Task": "New Todo",
+  "Completed": false
+}
