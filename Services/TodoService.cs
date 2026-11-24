@@ -14,6 +14,10 @@ public class TodoService: ITodoService {
     public async Task<IEnumerable<Todo>> GetTodosAsync() {
         return await _db.Todos.ToListAsync();
     }
+
+    public async Task<IEnumerable<Todo>> GetCompletedTodosAsync() {
+        return await _db.Todos.Where(t => t.Completed).ToListAsync();
+    }
     public async Task<Todo> GetTodoAsync(int id) {
         return await _db.Todos.FindAsync(id);
     }

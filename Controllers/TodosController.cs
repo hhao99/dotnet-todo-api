@@ -6,7 +6,7 @@ using todoapi.Services;
 namespace todoapi.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("api/v1.0/todos")]
 public class TodosController : ControllerBase
 {
    private readonly ITodoService _todoService;
@@ -18,6 +18,11 @@ public class TodosController : ControllerBase
     public async Task<IEnumerable<Todo>> Get()
     {
         return await _todoService.GetTodosAsync();
+    }
+    [HttpGet("completed")]
+    public async Task<IEnumerable<Todo>> GetCompleted()
+    {
+        return await _todoService.GetCompletedTodosAsync();
     }
     [HttpGet("{id}")]
     public async Task<ActionResult<Todo>> GetTodo(int id)
