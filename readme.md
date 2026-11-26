@@ -8,7 +8,7 @@ Asp.net is the web dev framework, support the traditional mvc pattern for the we
 
 This repository is the todo example to support minial api based on asp.net core and Microsoft.EntityFramework.
 
-# prerequiest
+# Rrerequisites
 
 * dotnet sdk 10.0 or 11.0
 * vscode 
@@ -16,7 +16,7 @@ This repository is the todo example to support minial api based on asp.net core 
 
 Basic dev skills on the web app and C# language.
 
-# setup
+# Prepare the envirement
 ```bash
 git clone https://github.com/hhao99/dotnet-todo-api
 dotnet restore
