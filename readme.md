@@ -1,6 +1,6 @@
 # dotnet minimal api reference build
 
-# why dotnet 
+# Why dotnet 
 Dotnet is the microsoft dev stack for the mordern application development, dotnet core is the open source solution from microsoft and supports cross platform development that support windows, linux and osx.
 
 # Asp.net core
@@ -8,7 +8,7 @@ Asp.net is the web dev framework, support the traditional mvc pattern for the we
 
 This repository is the todo example to support minial api based on asp.net core and Microsoft.EntityFramework.
 
-# Rrerequisites
+# Rerequisites
 
 * dotnet sdk 10.0 or 11.0
 * vscode 
